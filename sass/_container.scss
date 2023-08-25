@@ -1,0 +1,24 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 150vh;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "side head head head"
+    "side main main main"
+    "side main main main"
+    "side main main main"
+    "side foot foot foot";
+    color: #eee;
+    padding: $main-spacing;
+    gap: $main-spacing;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 550;
+    background-color: $bg-color;
+    letter-spacing: 1px;
+
+    & * {
+        padding: $main-spacing;
+        border-radius: 1px;
+    }
+}

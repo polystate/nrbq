@@ -1,0 +1,21 @@
+$main-spacing: 1.25rem;
+$primary: darkorange;
+$primary-2: orangered;
+$complementary: blueviolet;
+$complementary-2: palevioletred;
+$tertiary: darkslategrey;
+$bg-color: rgb(29, 27, 27);
+
+$photo-rad: 15px;
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+}

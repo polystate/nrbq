@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Barriecito&family=Roboto:wght@300&family=Tilt+Prism&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 150vh;
+  grid-template-rows: auto;
+  grid-template-areas: "side head head head" "side main main main" "side main main main" "side main main main" "side foot foot foot";
+  color: #eee;
+  padding: 1.25rem;
+  gap: 1.25rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 550;
+  background-color: rgb(29, 27, 27);
+  letter-spacing: 1px;
+}
+.container * {
+  padding: 1.25rem;
+  border-radius: 1px;
+}
+
+.header {
+  grid-area: head;
+  background-color: darkorange;
+  overflow: hidden;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+.header .spaceship {
+  width: 90%;
+}
+.header h1 {
+  box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transition: all 2s ease;
+  font-family: "Barriecito", "Lucida Sans", sans-serif;
+  letter-spacing: 5px;
+  text-align: center;
+}
+.header h1:hover {
+  color: lightgrey;
+  cursor: pointer;
+  transform: translateY(50px);
+}
+.header h1:active {
+  box-shadow: 1rem 1rem 1rem rgb(255, 255, 255);
+}
+
+.main {
+  grid-area: main;
+  background-color: palevioletred;
+  background-color: darkslategrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .content {
+  height: 100%;
+  overflow: hidden;
+}
+.main .content-header {
+  margin: 1.25rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+  font-style: italic;
+  padding-bottom: 3.125rem;
+}
+@media (max-width: 1135px) {
+  .main .content-header {
+    margin-left: 5.9375rem;
+  }
+}
+.main .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.main .gallery .image-container {
+  width: calc(33.33% - 20px);
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+  border-radius: 15px;
+  border: none;
+  transition: transform 3s ease;
+}
+.main .gallery .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  border-radius: 15px;
+}
+.main .gallery .image-container img:hover {
+  width: 200px;
+}
+.main .gallery .image-container:nth-child(odd) {
+  transform: skewY(10deg);
+}
+.main .gallery .image-container:nth-child(even) {
+  transform: skewY(-10deg);
+}
+
+.side {
+  grid-area: side;
+  background-color: blueviolet;
+}
+.side .nav .nav-links {
+  list-style: none;
+}
+.side .nav .nav-links .link a {
+  color: white;
+  text-decoration: none;
+}
+.side .nav .nav-links .link a:hover {
+  opacity: 0.9;
+  color: orange;
+}
+
+.footer {
+  grid-area: foot;
+  background-color: darkslategrey;
+  background-color: rgb(29, 27, 27);
+}
+
+@media (max-width: 750px) {
+  .container {
+    grid-template-areas: "head head head head" "side side side side" "main main main main" "main main main main" "foot foot foot foot";
+  }
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 376px) {
+  .container {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .container {
+    grid-template-areas: "head head head head" "main main main main" "main main main main" "foot foot foot foot";
+  }
+  .side {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

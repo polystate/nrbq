@@ -1,0 +1,99 @@
+.main{
+    grid-area: main;
+    background-color: $complementary-2;
+    background-color: $tertiary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .content{
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .content-header{
+        margin: $main-spacing;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        letter-spacing: 2px;
+        font-size: 2.5rem;
+        font-style: italic;
+        padding-bottom: $main-spacing * 2.5;
+        @media(max-width: 1135px){
+            margin-left: $main-spacing * 4.75;
+        }
+    }
+
+    .gallery{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: $main-spacing;
+       
+
+        .image-container{
+            width: calc(33.33% - 20px);
+            // width: 33.3%;
+            height: 200px;
+            overflow: hidden;
+            border: 1px solid black;
+            margin: 0;
+            padding: 0;
+            border-radius: $photo-rad;
+            border: none;
+            
+            transition: transform 3s ease;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                margin: 0; 
+                padding: 0;
+                border-radius: $photo-rad;
+            }
+
+            img:hover{
+                width: 200px;
+            }
+
+                
+            &:nth-child(odd){
+                transform: skewY(10deg);
+            }
+
+            &:nth-child(even){
+                transform: skewY(-10deg);
+            }
+        }
+        
+    }
+}
+
+
+
+.side {
+    grid-area: side;
+    background-color: $complementary;
+    .nav{
+        .nav-links {
+            list-style: none;
+            .link{
+                & a{
+                    color: white;
+                    text-decoration: none;
+                }
+
+                & a:hover{
+                    opacity: 0.9;
+                    color: orange;
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    grid-area: foot;
+    background-color: $tertiary;
+    background-color: $bg-color;
+}
