@@ -13,7 +13,7 @@ html {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 2fr 2fr 2fr;
   height: 150vh;
   grid-template-rows: auto;
   grid-template-areas: "side head head head" "side main main main" "side main main main" "side main main main" "side foot foot foot";
@@ -24,10 +24,51 @@ html {
   font-weight: 550;
   background-color: rgb(29, 27, 27);
   letter-spacing: 1px;
+  line-height: 1.6rem;
 }
 .container * {
   padding: 1.25rem;
   border-radius: 1px;
+}
+
+.footer {
+  grid-area: foot;
+  background-color: darkslategrey;
+  background-color: rgb(29, 27, 27);
+}
+
+.side {
+  grid-area: side;
+  background-color: blueviolet;
+  padding: 0;
+}
+.side .nav .nav-links {
+  list-style: none;
+}
+.side .nav .nav-links .link-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+.side .nav .nav-links .link-container img {
+  color: white;
+  fill: white;
+  padding: 0;
+  margin-right: 1.25rem;
+}
+.side .nav .nav-links .link-container:hover {
+  background-color: white;
+}
+.side .nav .nav-links .link a {
+  color: rgb(29, 27, 27);
+  text-decoration: none;
+}
+.side .nav .nav-links .link img:hover {
+  opacity: 0.9;
+  color: white;
 }
 
 .header {
@@ -38,6 +79,7 @@ html {
   justify-content: start;
   align-items: center;
   flex-direction: column;
+  height: 18vh;
 }
 .header .spaceship {
   width: 90%;
@@ -66,10 +108,11 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 117vh;
 }
 .main .content {
-  height: 100%;
   overflow: hidden;
+  height: 100%;
 }
 .main .content-header {
   margin: 1.25rem;
@@ -119,47 +162,103 @@ html {
   transform: skewY(-10deg);
 }
 
-.side {
-  grid-area: side;
-  background-color: blueviolet;
+.news-article {
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
 }
-.side .nav .nav-links {
-  list-style: none;
+.news-article .article-header {
+  font-weight: bolder;
 }
-.side .nav .nav-links .link a {
-  color: white;
-  text-decoration: none;
+.news-article .article-meta {
+  font-weight: 300;
+  background-color: palevioletred;
+  padding: 0.625rem;
 }
-.side .nav .nav-links .link a:hover {
-  opacity: 0.9;
-  color: orange;
+.news-article .article-meta span {
+  font-style: oblique;
 }
-
-.footer {
-  grid-area: foot;
-  background-color: darkslategrey;
-  background-color: rgb(29, 27, 27);
+.news-article .article-text {
+  line-height: 1.92rem;
+  font-weight: 475;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 280px) {
   .container {
-    grid-template-areas: "head head head head" "side side side side" "main main main main" "main main main main" "foot foot foot foot";
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+    height: 200vh;
+    overflow-x: none !important;
+  }
+  .content {
+    overflow-y: scroll !important;
+  }
+  .nav {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  .spaceship {
+    pointer-events: none;
+  }
+  .main {
+    order: 3;
+  }
+  .nav-smaller {
+    background-color: blueviolet;
+    height: 10vh;
+    display: flex;
   }
   .nav-links {
     display: flex;
-    flex-wrap: wrap;
+    width: 90%;
+    gap: none;
+    margin: 0;
+    padding: 0;
   }
-}
-@media (max-width: 376px) {
-  .container {
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(4, 1fr);
+  .link {
+    padding: 0;
+    margin: 0;
   }
-  .container {
-    grid-template-areas: "head head head head" "main main main main" "main main main main" "foot foot foot foot";
+  .link a {
+    color: white;
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
   }
-  .side {
-    display: none;
+  .gallery {
+    display: flex;
+    flex-direction: column;
+  }
+  .content-header {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    right: 4rem;
+    font-size: 1.75rem !important;
+  }
+  .image-container {
+    width: 100% !important;
+  }
+  .home-img {
+    pointer-events: none;
+  }
+  .gallery * {
+    transition: none !important;
+    transform: none !important;
+    border-radius: 0 !important;
   }
 }
 

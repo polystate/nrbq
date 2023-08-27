@@ -1,0 +1,28 @@
+.news-article {
+  border-top: $article-bord;
+  border-bottom: $article-bord;
+
+  .article-header {
+    font-weight: bolder;
+  }
+
+  .article-meta {
+    font-weight: 300;
+    background-color: $complementary-2;
+    padding: calc($main-spacing / 2);
+
+    & span {
+      font-style: oblique;
+    }
+
+    & time {
+    }
+  }
+
+  .article-text {
+    line-height: $line-height * 1.2;
+    font-weight: 475;
+  }
+}
+
+

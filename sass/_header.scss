@@ -1,36 +1,34 @@
-.header{
-    grid-area: head;
-    background-color: $primary;
-    overflow: hidden;
+.header {
+  grid-area: head;
+  background-color: $primary;
+  overflow: hidden;
 
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
-    
-    .spaceship{
-        width: 90%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  height: 18vh;
+
+  .spaceship {
+    width: 90%;
+  }
+
+  & h1 {
+    box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    transition: all 2s ease;
+    font-family: 'Barriecito', 'Lucida Sans', sans-serif;
+    letter-spacing: 5px;
+    text-align: center;
+
+    &:hover {
+      color: lightgrey;
+      cursor: pointer;
+      transform: translateY(50px);
     }
 
-    & h1{
-        box-shadow: 1rem 2rem 3rem rgba(0,0,0,.2);
-        border-radius: 50%;
-        transition: all 2s ease;
-        font-family: 'Barriecito', 'Lucida Sans', sans-serif;
-        letter-spacing: 5px;
-        text-align: center;
-
-        &:hover{
-            color: lightgrey;
-            cursor: pointer;
-            transform: translateY(50px);
-        }
-
-        &:active{
-            box-shadow: 1rem 1rem 1rem rgb(255, 255, 255);
-            
-        }
-
+    &:active {
+      box-shadow: 1rem 1rem 1rem rgb(255, 255, 255);
     }
+  }
 }
-

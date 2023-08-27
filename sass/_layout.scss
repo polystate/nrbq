@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr;
+  height: $vh-height;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'side head head head'
+    'side main main main'
+    'side main main main'
+    'side main main main'
+    'side foot foot foot';
+  color: #eee;
+  padding: $main-spacing;
+  gap: $main-spacing;
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 550;
+  background-color: $bg-color;
+  letter-spacing: 1px;
+  line-height: $line-height;
+
+  & * {
+    padding: $main-spacing;
+    border-radius: 1px;
+  }
+}
+
+.footer {
+  grid-area: foot;
+  background-color: $tertiary;
+  background-color: $bg-color;
+}

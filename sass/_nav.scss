@@ -1,0 +1,43 @@
+.side {
+  grid-area: side;
+  background-color: $complementary;
+  padding: 0;
+
+  .nav {
+    .nav-links {
+      list-style: none;
+
+      .link-container {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease;
+
+        & img {
+          color: white;
+          fill: white;
+          padding: 0;
+          margin-right: $main-spacing;
+        }
+
+        &:hover {
+          background-color: white;
+        }
+      }
+
+      .link {
+        & a {
+          color: $bg-color;
+          text-decoration: none;
+        }
+
+        & img:hover {
+          opacity: 0.9;
+          color: lighten($bg-color, 90%);
+        }
+      }
+    }
+  }
+}

@@ -1,40 +1,118 @@
-@import "setup";
-@import "container";
-@import "header";
-@import "content";
+$vh-height: 150vh;
+$main-spacing: 1.25rem;
+$main-spacing-small: $main-spacing * 0.67;
+$primary: darkorange;
+$primary-2: orangered;
+$complementary: blueviolet;
+$complementary-2: palevioletred;
+$tertiary: darkslategrey;
+$bg-color: rgb(29, 27, 27);
+
+$photo-rad: 15px;
+$line-height: 1.6rem;
+$article-bord: 1px solid rgba(255, 255, 255, 0.8);
+
+@import 'layout';
+@import 'nav';
+@import 'header';
+@import 'content';
+@import 'news';
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Roboto:wght@300&family=Tilt+Prism&display=swap');
 
-@media(max-width: 750px){
-    .container{
-        grid-template-areas:
-        "head head head head"
-        "side side side side"
-        "main main main main"
-        "main main main main"
-        "foot foot foot foot";
-    }
+@media (max-width: 280px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+    height: 200vh;
+    overflow-x: none !important;
+  }
 
-    .nav-links{
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
+  .content {
+    overflow-y: scroll !important;
+  }
 
-@media(max-width: 376px){
-    .container{
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-columns: repeat(4, 1fr);
-    }
+  .nav {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
 
-    .container{
-        grid-template-areas:
-        "head head head head"
-        "main main main main"
-        "main main main main"
-        "foot foot foot foot";
-    }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
 
-    .side{
-        display: none;
+  .spaceship {
+    pointer-events: none;
+
+    & h1 {
+      //   background-color: orange;
     }
+  }
+
+  .main {
+    order: 3;
+  }
+
+  .nav-smaller {
+    background-color: $complementary;
+    height: 10vh;
+    display: flex;
+  }
+
+  .nav-links {
+    display: flex;
+    width: 90%;
+    gap: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .link {
+    padding: 0;
+    margin: 0;
+    & a {
+      color: white;
+      font-size: 10px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    // overflow-y: scroll !important;
+  }
+
+  .content-header {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    right: 4rem;
+    font-size: 1.75rem !important;
+  }
+
+  .image-container {
+    width: 100% !important;
+  }
+
+  .home-img {
+    pointer-events: none;
+  }
+
+  .gallery * {
+    transition: none !important;
+    transform: none !important;
+    border-radius: 0 !important;
+  }
 }

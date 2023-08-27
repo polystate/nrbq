@@ -1,104 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>NRBQ</title>
-</head>
-<body class="container">
-        <header class="header">
-            <div class="spaceship">
-                <h1>NRBQ</h1>
+  </head>
+  <body class="container">
+    <header class="header">
+      <div class="spaceship">
+        <h1>NRBQ</h1>
+      </div>
+    </header>
+    <main class="main"></main>
+    <aside class="side">
+      <nav class="nav nav-smaller">
+        <ul class="nav-links">
+          <li class="link link-1">
+            <div class="link-container">
+              <a href="/"
+                ><img
+                  src="./SVG/home.svg"
+                  alt="Home Icon"
+                  class="nav-icon"
+                />Home</a
+              >
             </div>
-        </header>
-        <main class="main"></main>
-        <aside class="side">
-            <nav class="nav">
-                <ul class="nav-links">
-                    <li class="link link-1"><a href="/">Home</a></li>
-                    <li class="link link-1"><a href="/news">News</a></li>
-                    <li class="link link-2"><a href="/articles">Articles</a></li>
-                    <li class="link link-3"><a href="/discography">Discography</a></li>
-                    <li class="link link-4"><a href="/history">History</a></li>
-                    <li class="link link-5"><a href="/store">Store</a></li>
-                    <li class="link link-6"><a href="/connect">Connect</a></li>
-                    <li class="link link-7"><a href="/contact">Contact</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <footer class="footer"></footer>
-        <script src="index.js"></script>
+          </li>
+          <li class="link link-1">
+            <div class="link-container">
+              <a href="/news"
+                ><img
+                  src="./SVG/aircraft-take-off.svg"
+                  alt="Home Icon"
+                  class="nav-icon"
+                />News</a
+              >
+            </div>
+          </li>
+          <li class="link link-2">
+            <div class="link-container">
+              <a href="/gallery"
+                ><img
+                  src="./SVG/map.svg"
+                  alt="Map Icon"
+                  class="nav-icon"
+                />Gallery</a
+              >
+            </div>
+          </li>
+          <li class="link link-3">
+            <div class="link-container">
+              <a href="/discography"
+                ><img
+                  src="./SVG/map.svg"
+                  alt="Map Icon"
+                  class="nav-icon"
+                />Albums</a
+              >
+            </div>
+          </li>
+          <li class="link link-4">
+            <div class="link-container">
+              <a href="/history"
+                ><img
+                  src="./SVG/key.svg"
+                  alt="Key Icon"
+                  class="nav-icon"
+                />History</a
+              >
+            </div>
+          </li>
+          <!-- <li class="link link-5"><a href="/store">Store</a></li> -->
+          <li class="link link-5">
+            <div class="link-container">
+              <a href="/connect"
+                ><img
+                  src="./SVG/chat.svg"
+                  alt="Connect Icon"
+                  class="nav-icon"
+                />Connect</a
+              >
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <footer class="footer"></footer>
+    <script src="index.js"></script>
 
-        <script type="text/template" id="home-template">
-            <section class="content">
-                <h2 class="content-header">Gallery</h2>
-                <figure class="gallery">
-                    <article class="image-container">
-                        <image src="/images/NRBQ_1973.jpg" alt="A bunch of fine gentlemen!" class="home-img" />
-                    </article>
-                    <article class="image-container">
-                        <image src="/images/nrbq4.jpg" alt="A bunch of fine gentlemen!" class="home-img" />
-                    </article>
-                    <article class="image-container">
-                        <image src="/images/NRBQ_event_2.jpg" alt="A bunch of fine gentlemen!" class="home-img" />
-                    </article>
-                    <article class="image-container">
-                        <image src="/images/classic_photo.jpg" alt="A bunch of fine gentlemen!" class="home-img" />
-                    </article>
-                    
-                    <article class="image-container">
-                        <image src="/images/NRBQ_red.jpg" alt="A bunch of fine gentlemen!" class="home-img" />
-                    </article>
+    <script type="text/template" id="home-template">
+      <section class="content">
 
-                    <article class="image-container">
-                        <image src="/images/NRBQ_white.jpg" alt="A bunch of fine gentlemen!" class="home-img" />
-                    </article>
-                    
-                </figure>
-            </section>
-        </script>
+      </section>
+    </script>
 
-        <script type="text/template" id="news-template">
-            <section class="content">
-            <h2 class="content-header">Hello from News</h2>
-            </section>
-        </script>
+    <script type="text/template" id="news-template">
+      <section class="content">
+          <h2 class="content-header">From the Head Quarters</h2>
+          <article class="news-article">
+              <h3 class="article-header">NRBQ Rocks The White House</h3>
+              <p class="article-meta"><span>Published</span> on <time datetime="2023-08-15">August 15, 2023</time> by Your Name</p>
+              <p class="article-text">&quot;NRBQ blew the roof off of My Father's Place at the Roslyn Hotel in front of a sold-out crowd on July 27. After the set, and before the band returned to the stage for an encore, Norm Prusslin (a member of Stony Brook University staff/faculty for 33 years, former general manager of WUSB, and all-around wonderful person) presented Terry with a "Distinguished Musician Award" from the Long Island Music Hall of Fame. It was a great night!&quot;</p>
+              <!-- Also use <blockquote /> -->
+          </article>
+          <article class="news-article">
+              <h3 class="article-header">NRBQ Rocks The White House</h3>
+              <p class="article-meta"><span>Published</span> on <time datetime="2023-08-15">August 15, 2023</time> by Your Name</p>
+              <p class="article-text">&quot;NRBQ blew the roof off of My Father's Place at the Roslyn Hotel in front of a sold-out crowd on July 27. After the set, and before the band returned to the stage for an encore, Norm Prusslin (a member of Stony Brook University staff/faculty for 33 years, former general manager of WUSB, and all-around wonderful person) presented Terry with a "Distinguished Musician Award" from the Long Island Music Hall of Fame. It was a great night!&quot;</p>
+              <article class="news-article">
+                  <h3 class="article-header">NRBQ Rocks The White House</h3>
+                  <p class="article-meta"><span>Published</span> on <time datetime="2023-08-15">August 15, 2023</time> by Your Name</p>
+                  <p class="article-text">&quot;NRBQ blew the roof off of My Father's Place at the Roslyn Hotel in front of a sold-out crowd on July 27. After the set, and before the band returned to the stage for an encore, Norm Prusslin (a member of Stony Brook University staff/faculty for 33 years, former general manager of WUSB, and all-around wonderful person) presented Terry with a "Distinguished Musician Award" from the Long Island Music Hall of Fame. It was a great night!&quot;</p>
+                  <!-- Also use <blockquote /> -->
+              </article>
+              <!-- Also use <blockquote /> -->
+          </article>
+      </section>
+    </script>
 
-        <script type="text/template" id="articles-template">
-            <section class="content">
-            <h2 class="content-header">Hello from Articles</h2>
-            </section>
-        </script>
+    <script type="text/template" id="gallery-template">
+      <section class="content">
+          <h2 class="content-header">Gallery</h2>
+          <figure class="gallery">
+              <article class="image-container">
+                  <image src="/images/NRBQ_1973.jpg" alt="A bunch of fine gentlemen!" class="home-img" />
+              </article>
+              <article class="image-container">
+                  <image src="/images/nrbq4.jpg" alt="A bunch of fine gentlemen!" class="home-img" />
+              </article>
+              <article class="image-container">
+                  <image src="/images/NRBQ_event_2.jpg" alt="A bunch of fine gentlemen!" class="home-img" />
+              </article>
+              <article class="image-container">
+                  <image src="/images/classic_photo.jpg" alt="A bunch of fine gentlemen!" class="home-img" />
+              </article>
 
-        <script type="text/template" id="discography-template">
-            <section class="content">
-            <h2 class="content-header">Hello from Discography</h2>
-            </section>
-        </script>
+              <article class="image-container">
+                  <image src="/images/NRBQ_red.jpg" alt="A bunch of fine gentlemen!" class="home-img" />
+              </article>
 
-        <script type="text/template" id="history-template">
-            <section class="content">
-            <h2 class="content-header">Hello from History</h2>
-            </section>
-        </script>
+              <article class="image-container">
+                  <image src="/images/NRBQ_white.jpg" alt="A bunch of fine gentlemen!" class="home-img" />
+              </article>
 
-        <script type="text/template" id="store-template">
-            <section class="content">
-            <h2 class="content-header">Hello from Store</h2>
-            </section>
-        </script>
+          </figure>
 
-        <script type="text/template" id="connect-template">
-            <section class="content">
-            <h2 class="content-header">Hello from Connect</h2>
-            </section>
-        </script>
+      </section>
+    </script>
 
-        <script type="text/template" id="contact-template">
-            <section class="content">
-            <h2 class="content-header">Hello from Contact</h2>
-            </section>
-        </script>
-</body>
+    <script type="text/template" id="discography-template">
+      <section class="content">
+      <h2 class="content-header">
+          Discography</h2>
+          <figure class="gallery">
+              <article class="image-container">
+                  <img src="./albums/TurnOnTuneIn.jpg" alt="Turn On Tune In" />
+                  <figcaption>Turn On Tune In</figcaption>
+              </article>
+              <article class="image-container">
+              <img src="./albums/MessageForTheMessage.jpg" alt="Message for the Mess age" />
+              </article>
+              <article class="image-container">
+              <img src="./albums/DragnetCover.jpg" alt="DragNet" />
+              </article>
+              <article class="image-container">
+              <img src="./albums/AtYankeeStadium.jpg" alt="At Yankee Stadium" />
+              </article>
+              <article class="image-container">
+              <img src="./albums/AllHoppedUp.jpg" alt="All Hopped Up" />
+              </article>
+              <article class="image-container">
+              <img src="./albums/TiddlyWinks.jpg" alt="TiddlyWinks" />
+              </article>
+              <article class="image-container">
+                  <img src="./albums/GroovesInOrbit.jpg" alt="GroovesInOrbit" />
+              </article>
+              <article class="image-container">
+                  <img src="./albums/FirstAlbum.jpg" alt="FirstAlbum" />
+              </article>
+          </figure>
+
+      </section>
+    </script>
+
+    <script type="text/template" id="history-template">
+      <section class="content">
+      <h2 class="content-header">Hello from History</h2>
+      </section>
+    </script>
+
+    <script type="text/template" id="store-template">
+      <section class="content">
+      <h2 class="content-header">Hello from Store</h2>
+      </section>
+    </script>
+
+    <script type="text/template" id="connect-template">
+      <section class="content">
+      <h2 class="content-header">Message Board</h2>
+      <section class="new-message">
+          <h2>Add a New Message</h2>
+          <form id="message-form">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+              <button type="submit">Post Message</button>
+          </form>
+      </section>
+      </section>
+    </script>
+
+    <script type="text/template" id="contact-template">
+      <section class="content">
+      <h2 class="content-header">Contact Us</h2>
+      <form action="#" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit">Submit</button>
+      </form>
+      </section>
+    </script>
+  </body>
 </html>
