@@ -28,13 +28,24 @@ html {
 }
 .container * {
   padding: 1.25rem;
-  border-radius: 1px;
+  border-radius: 5px;
 }
 
 .footer {
   grid-area: foot;
   background-color: darkslategrey;
   background-color: rgb(29, 27, 27);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: smaller;
+}
+
+#theCaptain {
+  max-width: 10%;
+  text-align: center;
 }
 
 .side {
@@ -49,6 +60,7 @@ html {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease;
@@ -182,7 +194,61 @@ html {
   font-weight: 475;
 }
 
-@media (max-width: 280px) {
+#message-board {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  height: 75vh;
+  border-radius: 0;
+  gap: 2.5rem;
+  background-color: #fff;
+}
+#message-board button {
+  background-color: rgb(29, 27, 27);
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  max-width: 50%;
+  border-radius: 2.5px;
+}
+#message-board button:hover {
+  background-color: #373434;
+}
+#message-board input {
+  border: none;
+  outline: none;
+  border: 1px solid #1c1a1a;
+  border-radius: 2.5px;
+}
+#message-board .sendMessageContainer {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+}
+#message-board .message-container {
+  background-color: rgba(29, 27, 27, 0.75);
+  background-color: rgb(29, 27, 27);
+  height: 12rem;
+  overflow-y: scroll;
+}
+#message-board .user-input {
+  border-radius: 50%;
+  background-color: rgb(29, 27, 27);
+  color: white;
+  padding: 2.5rem;
+  font-style: italic;
+}
+#message-board .user-input::placeholder {
+  font-weight: 500;
+  color: #fff;
+}
+#message-board .user-message {
+  display: flex;
+}
+
+@media (max-width: 376px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -196,46 +262,58 @@ html {
   }
   .nav {
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    margin: 0;
+    background-color: black;
   }
   .header {
+    margin: 0;
+    padding: 0;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    margin: 0;
+    background-color: black;
   }
   .spaceship {
     pointer-events: none;
   }
   .main {
     order: 3;
-  }
-  .nav-smaller {
-    background-color: blueviolet;
-    height: 10vh;
-    display: flex;
+    background-color: #3c0e66;
   }
   .nav-links {
-    display: flex;
-    width: 90%;
-    gap: none;
+    width: 100%;
+    background-color: white;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8375rem;
+  }
+  .nav-icon {
+    margin-left: 0.8375rem;
   }
   .link {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
   .link a {
-    color: white;
+    color: rgb(29, 27, 27);
     font-size: 10px;
     padding: 0;
     margin: 0;
+    text-align: center;
   }
   .gallery {
     display: flex;
@@ -244,7 +322,10 @@ html {
   .content-header {
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     position: relative;
     right: 4rem;
     font-size: 1.75rem !important;
@@ -259,6 +340,9 @@ html {
     transition: none !important;
     transform: none !important;
     border-radius: 0 !important;
+  }
+  footer {
+    order: 5;
   }
 }
 

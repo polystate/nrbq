@@ -1,0 +1,64 @@
+#message-board {
+  display: flex;
+  flex-direction: column;
+  padding: $main-spacing * 2;
+  height: 75vh;
+  border-radius: 0;
+  gap: $main-spacing * 2;
+
+  background-color: #fff;
+
+  & button {
+    // background-color: darken($primary, 10%);
+    background-color: $bg-color;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    max-width: 50%;
+    border-radius: $second-bord-rad;
+
+    &:hover {
+      background-color: lighten($bg-color, 10%);
+    }
+  }
+
+  & input {
+    border: none;
+    outline: none;
+    border: 1px solid darken($bg-color, 0.25);
+    border-radius: $second-bord-rad;
+  }
+
+  .sendMessageContainer {
+    display: flex;
+    gap: $main-spacing * 2;
+    justify-content: center;
+  }
+
+  .message-container {
+    background-color: rgba($bg-color, 0.75);
+    background-color: $bg-color;
+    height: 12rem;
+    overflow-y: scroll;
+  }
+
+  .user-input {
+    border-radius: 50%;
+    background-color: $bg-color;
+    color: white;
+    padding: $main-spacing * 2;
+    font-style: italic;
+
+    &::placeholder {
+      font-weight: 500;
+      color: #fff;
+    }
+  }
+
+  .user-message {
+    display: flex;
+    // flex-wrap: wrap;
+  }
+}

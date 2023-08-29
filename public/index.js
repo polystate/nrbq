@@ -1,3 +1,5 @@
+import generateMessageBoard from './message_board.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-links a');
   const mainContainer = document.querySelector('.main');
@@ -26,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       case '/connect':
         mainContainer.innerHTML = connectTemplate;
+        generateMessageBoard();
         break;
       default:
         mainContainer.innerHTML = homeTemplate;
@@ -46,3 +49,5 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentRoute = window.location.pathname;
   loadContent(currentRoute);
 });
+
+/* Nav at smaller screen size */

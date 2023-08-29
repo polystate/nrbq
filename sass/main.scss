@@ -11,15 +11,27 @@ $bg-color: rgb(29, 27, 27);
 $photo-rad: 15px;
 $line-height: 1.6rem;
 $article-bord: 1px solid rgba(255, 255, 255, 0.8);
+$main-bord-rad: 5px;
+$second-bord-rad: $main-bord-rad/2;
+
+@mixin resetCenter($align: row) {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: $align;
+  justify-content: center;
+  align-items: center;
+}
 
 @import 'layout';
 @import 'nav';
 @import 'header';
 @import 'content';
 @import 'news';
+@import 'connect';
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Roboto:wght@300&family=Tilt+Prism&display=swap');
 
-@media (max-width: 280px) {
+@media (max-width: 376px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -35,68 +47,54 @@ $article-bord: 1px solid rgba(255, 255, 255, 0.8);
 
   .nav {
     overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
+    @include resetCenter;
+    background-color: black;
   }
 
   .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
+    @include resetCenter;
+    background-color: black;
   }
 
   .spaceship {
     pointer-events: none;
-
-    & h1 {
-      //   background-color: orange;
-    }
   }
 
   .main {
     order: 3;
-  }
-
-  .nav-smaller {
-    background-color: $complementary;
-    height: 10vh;
-    display: flex;
+    background-color: darken($complementary, 30%);
+    // background-color: $complementary;
   }
 
   .nav-links {
-    display: flex;
-    width: 90%;
-    gap: none;
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    background-color: white;
+    @include resetCenter;
+    padding: $main-spacing-small;
+  }
+
+  .nav-icon {
+    margin-left: $main-spacing-small;
   }
 
   .link {
-    padding: 0;
-    margin: 0;
+    @include resetCenter;
     & a {
-      color: white;
+      color: $bg-color;
       font-size: 10px;
       padding: 0;
       margin: 0;
+      text-align: center;
     }
   }
 
   .gallery {
     display: flex;
     flex-direction: column;
-    // overflow-y: scroll !important;
   }
 
   .content-header {
-    margin: 0;
-    padding: 0;
-    text-align: center;
+    @include resetCenter;
     position: relative;
     right: 4rem;
     font-size: 1.75rem !important;
@@ -114,5 +112,9 @@ $article-bord: 1px solid rgba(255, 255, 255, 0.8);
     transition: none !important;
     transform: none !important;
     border-radius: 0 !important;
+  }
+
+  footer {
+    order: 5;
   }
 }

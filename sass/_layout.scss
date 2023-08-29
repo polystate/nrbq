@@ -34,7 +34,7 @@ html {
 
   & * {
     padding: $main-spacing;
-    border-radius: 1px;
+    border-radius: $main-bord-rad;
   }
 }
 
@@ -42,4 +42,15 @@ html {
   grid-area: foot;
   background-color: $tertiary;
   background-color: $bg-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: smaller;
+}
+
+#theCaptain {
+  max-width: 10%;
+  text-align: center;
 }

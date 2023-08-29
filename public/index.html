@@ -16,8 +16,8 @@
     <aside class="side">
       <nav class="nav nav-smaller">
         <ul class="nav-links">
-          <li class="link link-1">
-            <div class="link-container">
+          <!-- <li class="link link-1"> -->
+          <!-- <div class="link-container">
               <a href="/"
                 ><img
                   src="./SVG/home.svg"
@@ -25,8 +25,8 @@
                   class="nav-icon"
                 />Home</a
               >
-            </div>
-          </li>
+            </div> -->
+          <!-- </li> -->
           <li class="link link-1">
             <div class="link-container">
               <a href="/news"
@@ -86,8 +86,20 @@
         </ul>
       </nav>
     </aside>
-    <footer class="footer"></footer>
-    <script src="index.js"></script>
+    <footer class="footer">
+      &copy; The Headquarters 2023. All rights reserved. Any disinfringement of
+      our clauses will result in a hasty visit from the Captain.
+      <img
+        src="/images/CaptainLou.jpg"
+        alt="I am the captain!"
+        title="I am the guiding light!"
+        id="theCaptain"
+      />
+    </footer>
+
+    <!-- Script Tags -->
+    <script type="module" src="message_board.js"></script>
+    <script type="module" src="index.js"></script>
 
     <script type="text/template" id="home-template">
       <section class="content">
@@ -198,17 +210,9 @@
 
     <script type="text/template" id="connect-template">
       <section class="content">
-      <h2 class="content-header">Message Board</h2>
-      <section class="new-message">
-          <h2>Add a New Message</h2>
-          <form id="message-form">
-              <label for="username">Username:</label>
-              <input type="text" id="username" name="username" required>
-              <label for="message">Message:</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-              <button type="submit">Post Message</button>
-          </form>
-      </section>
+        <div id="message-board">
+
+        </div>
       </section>
     </script>
 
